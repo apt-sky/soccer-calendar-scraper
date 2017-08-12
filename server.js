@@ -1,6 +1,7 @@
 /**
  * Code as adapted from https://scotch.io/tutorials/scraping-the-web-with-node-js
  * Additional documentation on Cheerio found here - https://www.npmjs.com/package/cheerio
+ * Using the web schedule at http://www.goal.com/en-us/live-scores
 */
 
 var express = require('express');
@@ -11,7 +12,7 @@ var app     = express();
 
 app.get('/scrape', function(req, res) {
 
-    var url = '';
+    var url = 'http://www.goal.com/en-us/live-scores';
     request(url, function(error, response, html){
         if(!error) {
             var $ = cheerio.load(html);
