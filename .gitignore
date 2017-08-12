@@ -1,0 +1,5 @@
+# OSX
+.DS_store
+
+# Node
+node_modules/
