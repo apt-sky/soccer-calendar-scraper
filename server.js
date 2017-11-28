@@ -13,12 +13,12 @@ var app     = express();
 app.get('/scrape', function(req, res) {
 
     var url = 'http://www.goal.com/en-us/live-scores';
+    var day, games;
+    var json = { day : "", games : [] };
+
     request(url, function(error, response, html){
         if(!error) {
             var $ = cheerio.load(html);
-
-            var day, time, league, game;
-            var json = { day = "", games = [] };
 
             $('.today').filter(function(){
                 var data = $(this);
@@ -32,22 +32,22 @@ app.get('/scrape', function(req, res) {
                 var match = data.find('.match-teams').find('.match-data');
                 var home_team = match.find('.team-home').find('.team-name').text();
                 var away_team = match.find('.team-away').find('.team-name').text();
-                var inner_json = { "home_team" = home_team, "away_team" = away_team, "time" = time }'
-                json.game.push(inner_json);
+                var inner_json = { "home_team" : home_team, "away_team" : away_team, "time" : time };
+                json.games.push(inner_json);
             });
+
+
+            fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+                if(!err) {
+                    console.log('File Written successfully');
+                } else {
+                    console.log('Error' + err);
+                }
+            })
+
+            res.send('Check your console!');
         }
     }) 
-
-
-    fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-        if(!err) {
-            console.log('File Written successfully');
-        } else {
-            console.log('Error' + err);
-        }
-    })
-
-    res.send('Check your console!');
 
 });
 
