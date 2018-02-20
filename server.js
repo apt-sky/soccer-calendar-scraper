@@ -12,7 +12,20 @@ var app     = express();
 
 app.get('/scrape', function(req, res) {
 
+    // Constants
+    let TODAY = '.today';
+    let MATCH_DATA = '.match-main-data-link'
+    let MATCH_TIME = '.match-status';
+    let TEAMS = '.match-teams';
+    let TEAMS_DATA = '.match-data';
+    let TEAM_NAME = '.team-name';
+    let HOME_TEAM = '.team-home';
+    let AWAY_TEAM = '.team-away';
+
+    let OUTPUT_FILE = 'output.json';
+
     var url = 'http://www.goal.com/en-us/live-scores';
+
     var day, games;
     var json = { day : "", games : [] };
 
@@ -20,24 +33,26 @@ app.get('/scrape', function(req, res) {
         if(!error) {
             var $ = cheerio.load(html);
 
-            $('.today').filter(function(){
+            $(TODAY).filter(function(){
                 var data = $(this);
                 today = data.children().first().text();
                 json.day = today;
             });
 
-            $('.match-main-data-link').each(function(i, elem){
+            $(MATCH_DATA).each(function(i, elem){
                 var data = $(this);
-                var time = data.find('.match-status').children().first().text();
-                var match = data.find('.match-teams').find('.match-data');
-                var home_team = match.find('.team-home').find('.team-name').text();
-                var away_team = match.find('.team-away').find('.team-name').text();
-                var inner_json = { "home_team" : home_team, "away_team" : away_team, "time" : time };
+                var competition = data.parent().parent().parent().parent().find('.competition-title').text();
+                var status = data.find(MATCH_TIME).children().first().text();
+                var time = data.find(MATCH_TIME).children().last().text();
+                var match = data.find(TEAMS).find(TEAMS_DATA);
+                var home_team = match.find(HOME_TEAM).find(TEAM_NAME).text();
+                var away_team = match.find(AWAY_TEAM).find(TEAM_NAME).text();
+                var inner_json = { "home_team" : home_team, "away_team" : away_team, "time" : time, "status" : status, "competition" : competition };
                 json.games.push(inner_json);
             });
 
 
-            fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+            fs.writeFile(OUTPUT_FILE, JSON.stringify(json, null, 4), function(err){
                 if(!err) {
                     console.log('File Written successfully');
                 } else {
