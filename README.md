@@ -1,0 +1,5 @@
+- Clone the repo
+- Run `npm install`
+- Start the server using `node server.js`
+- Go to the url localhost:8081/scrape
+- The directory from which the server was run will have output.json written out
