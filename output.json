@@ -1,165 +1,47 @@
 {
-    "day": "August 12, 2017",
+    "day": "February 20, 2018",
     "games": [
         {
-            "home_team": "Arsenal",
-            "away_team": "Leicester City",
-            "time": "FT"
-        },
-        {
-            "home_team": "Watford",
-            "away_team": "Liverpool",
-            "time": ""
+            "home_team": "Bayern München",
+            "away_team": "Beşiktaş",
+            "time": "   19:45 ",
+            "status": ""
         },
         {
             "home_team": "Chelsea",
-            "away_team": "Burnley",
-            "time": ""
+            "away_team": "Barcelona",
+            "time": "   19:45 ",
+            "status": ""
         },
         {
-            "home_team": "Crystal Palace",
-            "away_team": "Huddersfield Town",
-            "time": ""
+            "home_team": "Getafe",
+            "away_team": "Celta de Vigo",
+            "time": "   20:00 ",
+            "status": "FT"
         },
         {
-            "home_team": "Everton",
-            "away_team": "Stoke City",
-            "time": ""
+            "home_team": "Eintracht Frankfurt",
+            "away_team": "RB Leipzig",
+            "time": "   19:30 ",
+            "status": "FT"
         },
         {
-            "home_team": "Southampton",
-            "away_team": "Swansea City",
-            "time": ""
+            "home_team": "Lazio",
+            "away_team": "Hellas Verona",
+            "time": "   19:45 ",
+            "status": "FT"
         },
         {
-            "home_team": "West Bromwich Albion",
-            "away_team": "AFC Bournemouth",
-            "time": ""
+            "home_team": "Troyes",
+            "away_team": "Dijon",
+            "time": "   17:30 ",
+            "status": ""
         },
         {
-            "home_team": "Brighton & Hove Albion",
+            "home_team": "Wigan Athletic",
             "away_team": "Manchester City",
-            "time": ""
-        },
-        {
-            "home_team": "Nice",
-            "away_team": "Troyes",
-            "time": "FT"
-        },
-        {
-            "home_team": "Rennes",
-            "away_team": "Olympique Lyonnais",
-            "time": "FT"
-        },
-        {
-            "home_team": "Nantes",
-            "away_team": "Olympique Marseille",
-            "time": ""
-        },
-        {
-            "home_team": "Amiens SC",
-            "away_team": "Angers SCO",
-            "time": ""
-        },
-        {
-            "home_team": "Bordeaux",
-            "away_team": "Metz",
-            "time": ""
-        },
-        {
-            "home_team": "Caen",
-            "away_team": "Saint-Étienne",
-            "time": ""
-        },
-        {
-            "home_team": "Toulouse",
-            "away_team": "Montpellier",
-            "time": ""
-        },
-        {
-            "home_team": "Seattle Sounders",
-            "away_team": "Sporting KC",
-            "time": ""
-        },
-        {
-            "home_team": "Toronto",
-            "away_team": "Portland Timbers",
-            "time": ""
-        },
-        {
-            "home_team": "DC United",
-            "away_team": "Real Salt Lake",
-            "time": ""
-        },
-        {
-            "home_team": "Columbus Crew",
-            "away_team": "Chicago Fire",
-            "time": ""
-        },
-        {
-            "home_team": "New York RB",
-            "away_team": "Orlando City",
-            "time": ""
-        },
-        {
-            "home_team": "Dallas",
-            "away_team": "Colorado Rapids",
-            "time": ""
-        },
-        {
-            "home_team": "New England",
-            "away_team": "Vancouver Whitecaps",
-            "time": ""
-        },
-        {
-            "home_team": "Philadelphia Union",
-            "away_team": "Montreal Impact",
-            "time": ""
-        },
-        {
-            "home_team": "Houston Dynamo",
-            "away_team": "SJ Earthquakes",
-            "time": ""
-        },
-        {
-            "home_team": "LA Galaxy",
-            "away_team": "New York City",
-            "time": ""
-        },
-        {
-            "home_team": "Puebla",
-            "away_team": "Tijuana",
-            "time": "FT"
-        },
-        {
-            "home_team": "Atlas",
-            "away_team": "América",
-            "time": "FT"
-        },
-        {
-            "home_team": "Cruz Azul",
-            "away_team": "Toluca",
-            "time": ""
-        },
-        {
-            "home_team": "Querétaro",
-            "away_team": "Morelia",
-            "time": ""
-        },
-        {
-            "home_team": "Monterrey",
-            "away_team": "Guadalajara",
-            "time": ""
-        },
-        {
-            "home_team": "Pachuca",
-            "away_team": "Tigres UANL",
-            "time": ""
-        },
-        {
-            "home_team": "Necaxa",
-            "away_team": "León",
-            "time": ""
+            "time": "   19:55 ",
+            "status": "FT"
         }
     ]
 }
